@@ -14,3 +14,17 @@ function bumpCounter() {
     getBumps
   }
 }
+
+function createAnimal(animalType) {
+  function innerFunc(deadlyDevice) {
+    return { animalType, deadlyDevice }
+  }
+
+  return innerFunc
+}
+
+var sharkCreator = createAnimal('Shark')
+
+var sharkWithFrickinLaserbeam = sharkCreator('Laserbeam')
+
+var sharkWithFrickinCannon = sharkCreator('Cannon') 
